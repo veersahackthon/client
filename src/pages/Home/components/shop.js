@@ -22,9 +22,9 @@ const shop = () => {
                     <div className="inline-block ">
                     <div className="col-start-1 col-end-3 relative -mt-36 ">
                             <img className={imageStyle} src="https://images.unsplash.com/photo-1624990306661-b742b5a19514?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="prod"/>
-                            <img className={imageStyle} src="https://cdn01.pharmeasy.in/dam/products_otc/270551/revital-h-health-supplement-capsules-strip-of-10-1-1643883344.jpg" alt="prod"/>
+                            <img className={imageStyle} src="https://images.unsplash.com/photo-1607077792448-17b60bcca65f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1lZGljaW5lfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="prod"/>
+                            <img  className={imageStyle} src="https://images.pexels.com/photos/4041391/pexels-photo-4041391.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="prod"/>
                             <img  className={imageStyle} src="https://images.unsplash.com/photo-1584707824245-f67bad2c62d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="prod"/>
-                            <img  className={imageStyle} src="https://images.unsplash.com/photo-1618120508902-c8d05e7985ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="prod"/>
                         </div>
                     </div>
                         

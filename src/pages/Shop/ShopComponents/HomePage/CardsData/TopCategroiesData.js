@@ -4,20 +4,20 @@ const TopCategories = {
   products: [
     {
       id:1,
-      img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS8yT_nZAfYvAfPkEvU2Hs5a8sDGAjYRKGPHX_wNxqabvvd37JYvdOablW8gsw6UT-OM9aRugmegzNGu4Lye1-S3xIfGbVmA0p9BIEYkJU&usqp=CAE",
-      h1: "Home Decor",
+      img: "https://images.unsplash.com/photo-1633249194032-afa16073ebd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aGVhbHRoY2FyZSUyMHByb2R1Y3RzfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      h1: "Medicines",
       cat:"homeDecor"
     },
     {
       id:2,
-      img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ6Aq3idzyBCUDdPSvC5hvK6jTpT4eJRCfemHpV88xSrvXxxAaFl2-mLmVfJ9EfZhBwft0vnWtlZLP_kNumBdNtqBTaNh0Y2RsBARHmLSt4Xw2micBwmNQ9gQ&usqp=CAE",
-      h1: "Paper Products",
+      img: "https://images.unsplash.com/photo-1624990306661-b742b5a19514?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGVhbHRoY2FyZSUyMHByb2R1Y3RzfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      h1: "Health Care",
       cat:"paperProducts"
     },
     {
       id:3,
-      img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDIOLsLbTE5QkCBANtcuMA1A8PWgS2uausX5ZBHnC_hM9L4gOpbO5uiqjAdqjwgxpy4_cXYh7VXR14OElIfC9EPfV3RcEBpuPPciJxCSvxptdxWVXtDhyL4w&usqp=CAE",
-      h1: "Clothing",
+      img: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhlYWx0aCUyMHByb2R1Y3RzfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      h1: "Covid Essentials",
       text: tex,
       cat:"Clothing"
     },

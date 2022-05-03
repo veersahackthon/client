@@ -6,7 +6,7 @@ const Data = [
     stext: "Nisi lacus sed viverra tellus in hac.",
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRavLre15apQ_P1UCzUHPZmY0EI4qRXe8NClg&usqp=CAU",
+    img: "https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9ycyUyMGNvbnN1bHRhdGlvbnxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
     title: "Doctors Consultation",
     text: "Medicine Cure diseases,but only doctors can cure Patients.....",
     stext:
