@@ -6,15 +6,9 @@ const Data = [
     stext: 'Nisi lacus sed viverra tellus in hac.',
   },
   {
-<<<<<<< HEAD
-    img: "https://images.pexels.com/photos/7580251/pexels-photo-7580251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    title: "Doctors Consultation",
-    text: "Medicine Cure diseases,but only doctors can cure Patients.....",
-=======
     img: 'https://images.pexels.com/photos/7580251/pexels-photo-7580251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Doctors Consultation',
     text: 'Medicine Cure diseases,but only doctors can cure Patients.....',
->>>>>>> a501e2389b4773aa9be1c710afffd1f7dd930d6f
     stext:
       'Eget aliquet nibh praesent tristique magna. Convallis convallis tellus id interdum velit laoreet.',
   },
