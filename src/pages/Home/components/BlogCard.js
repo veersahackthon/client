@@ -15,7 +15,7 @@ const BlogCard = ({ image, text, title, Date }) => {
           <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg">
             <div class="flex items-baseline">
               <span class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
-                New
+                Experienced
               </span>
               <div class="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
                 {Date} &bull; 3 min
@@ -29,7 +29,7 @@ const BlogCard = ({ image, text, title, Date }) => {
             <div class="mt-1">{text}</div>
             <div class="mt-4">
               <Btn
-                link="/article"
+                link="/blog"
                 styles="text-white bg-black"
                 title="Read More"
               />

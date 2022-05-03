@@ -1,10 +1,10 @@
 import { Container, Row, Col } from "reactstrap";
 // import Logo from "../../../assets/s1.svg"
- import Ser1 from "../../../assets/s-3.png";
-import Ser2 from "../../../assets/s-4.png";
-import Ser3 from "../../../assets/s-8.png";
-import Ser4 from "../../../assets/s-7.png";
-import Ser5 from "../../../assets/s-5.png";
+ import Ser1 from "../../../assets/s10.svg";
+import Ser2 from "../../../assets/s12.svg";
+import Ser3 from "../../../assets/s11.svg";
+import Ser4 from "../../../assets/s9.svg";
+import Ser5 from "../../../assets/s13.svg";
 import Ser6 from "../../../assets/s-6.png";
 const Service = () => {
   const services = [
@@ -19,8 +19,8 @@ const Service = () => {
       img: Ser6,
     },
     {
-      title: "Eat a Vegetable",
-      desc: " Not only are vegetables whole foods but they are rich in vitamins, minerals and are great sources of fibre, which can help to maintain a healthy gut",
+      title: "Exercise Daily",
+      desc: " When you exercise, feel-good chemicals called endorphins are released in your body. These endorphins spark a positive, euphoric feeling.",
       img: Ser5,
     },
     {
