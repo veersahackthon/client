@@ -1,0 +1,89 @@
+.profile-heading {
+    color: #602912;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0.6rem 0;
+  }
+  
+  .profile-main {
+    height: 60vh;
+    width: 50vw;
+    border-radius: 2rem;
+    background-color: rgb(247, 225, 217);
+  }
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 100px;
+    padding: 0 0.5rem;
+    margin-right: 15px;
+  }
+  .profile-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mid-sec div {
+    margin: 1rem;
+  }
+  .profile-mid-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-cake {
+    width: 40%;
+    border-right: 3px solid brown;
+  }
+  
+  .cakeimg {
+    height: 15rem;
+    width: 15rem;
+    margin-right: 2rem;
+  }
+  
+  .profile-mid-right {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-mid-right input {
+    margin-top: 1rem;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: #602912;
+  }
+  .profiledetails {
+    margin-bottom: 150px;
+  }
+  .profile-button {
+    margin-top: 1rem;
+    color: white;
+    background-color: #ff8d95;
+    border: none;
+    padding: 0.3rem 2rem;
+    border-radius: 0.9rem;
+  }
+  
+  .circle {
+    height: 6rem;
+    width: 6rem;
+    background-color: #ff8d95;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .circle-name {
+    margin-top: 2rem;
+  }
+  .vl {
+    border: 0.1rem solid #602912;
+    height: 16rem;
+  }
+  

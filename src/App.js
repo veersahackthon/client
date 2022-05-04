@@ -1,47 +1,51 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar/Header';
-import { BrowserRouter } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
-import SignIn from './pages/Signin/Signin';
-import Home from './pages/Home/Home';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar/Header";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
-import '../node_modules/swiper/swiper.scss';
-import '../node_modules/swiper/swiper.min.css';
+import "../node_modules/swiper/swiper.scss";
+import "../node_modules/swiper/swiper.min.css";
 // import "swiper/modules/effect-cards/effect-cards.min.css";
 
-import About from './pages/AboutUs/about';
+import About from "./pages/AboutUs/about";
 
-import Contact from './pages/ContactUs/contact';
+import Contact from "./pages/ContactUs/contact";
 
-import Shop from './pages/Shop/Shop';
+import Shop from "./pages/Shop/Shop";
 
-import Blog from './pages/Blog/blog';
+import Blog from "./pages/Blog/blog";
 
-import Footer from './components/Footer/footer';
+import Footer from "./components/Footer/footer";
 
-import Article from './pages/Blog/Article/Article';
+import Article from "./pages/Blog/Article/Article";
 
-import Cart from './pages/Shop/ShopPages/Cart';
+import Cart from "./pages/Shop/ShopPages/Cart";
 
-import Uploads from './components/UploadImage/UploadProduct';
+import Uploads from "./components/UploadImage/UploadProduct";
 
-import Admin from './pages/Admin/main/admin';
+import Admin from "./pages/Admin/main/admin";
 
-import MoreProductList from './pages/Shop/ShopPages/MoreProductList';
+import MoreProductList from "./pages/Shop/ShopPages/MoreProductList";
+
+import Login from "./pages/Signin/login";
+
+import OTPPage from "./pages/Signin/verfiotp";
+
+import SignUp from "./pages/Signin/SignUp";
 
 // import ProductDesc fro
-import ProductDesc from './pages/Shop/ShopPages/ProductDesc';
-import react, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './App.css';
+import ProductDesc from "./pages/Shop/ShopPages/ProductDesc";
+import react, { useState, useEffect } from "react";
+import axios from "axios";
+import "./App.css";
 
 function App() {
-
   //creating function to load ip address from the API
   const getData = async () => {
     try {
-      const res = await axios.get('https://geolocation-db.com/json/');
+      const res = await axios.get("https://geolocation-db.com/json/");
       // setIP(res.data.IPv4);
       postIp(res.data.IPv4);
     } catch (error) {
@@ -51,11 +55,11 @@ function App() {
 
   const postIp = async (data) => {
     try {
-      fetch('http://localhost:5000/api/ip', {
-        method: 'post',
+      fetch("http://localhost:5000/api/ip", {
+        method: "post",
         headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
 
         body: JSON.stringify({
@@ -66,10 +70,9 @@ function App() {
       console.log(error);
     }
   };
-useEffect(() => {
-  getData();
-},[])
- 
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <BrowserRouter>
@@ -92,11 +95,14 @@ useEffect(() => {
 
           <Route exact path="/contact" element={<Contact />} />
 
-          <Route exact path="/signIn" element={<SignIn />} />
+          <Route exact path="/signup" element={<SignUp />} />
 
           <Route exact path="/uploads" element={<Uploads />} />
 
           <Route exact path="/cart" element={<Cart />} />
+
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/verify" element={<OTPPage />} />
 
           <Route
             exact
