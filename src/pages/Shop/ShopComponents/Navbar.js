@@ -1,157 +1,152 @@
-import { Fragment, useState } from 'react';
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
+import { Fragment, useState } from "react";
+import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import {
   MenuIcon,
   SearchIcon,
   ShoppingBagIcon,
   XIcon,
-} from '@heroicons/react/outline';
+} from "@heroicons/react/outline";
 
-import { Link } from 'react-router-dom';
-import { CartState } from '../context/contex';
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const navigation = {
   categories: [
     {
-      id: 'Personal Care',
-      name: 'Personal care',
+      id: "women",
+      name: "Women",
       featured: [
         {
-          name: 'Covid Essentials',
-          href: '#',
+          name: "New Arrivals",
+          href: "#",
           imageSrc:
-            'https://images.unsplash.com/photo-1584744982491-665216d95f8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFza3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
           imageAlt:
-            'Models sitting back to back, wearing Basic Tee in black and bone.',
+            "Models sitting back to back, wearing Basic Tee in black and bone.",
         },
         {
-          name: 'Skin Care',
-          href: '#',
+          name: "Basic Tees",
+          href: "#",
           imageSrc:
-            'https://images.unsplash.com/photo-1610595433626-e45abdb5a88b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbmFsJTIwY2FyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
           imageAlt:
-            'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
         },
       ],
       sections: [
         {
-          id: 'Sub Categories',
-          name: 'Sub Categories',
+          id: "clothing",
+          name: "Clothing",
           items: [
-            { name: 'Men Care', href: '#' },
-            { name: 'Appliances', href: '#' },
-            { name: 'Women Care', href: '#' },
-            { name: 'Hair Care', href: '#' },
-            { name: 'Face Care', href: '#' },
-            { name: 'Hands & Feet', href: '#' },
-            { name: 'Body Care', href: '#' },
-            { name: 'Male Grooming', href: '#' },
-            { name: 'Oral Care', href: '#' },
+            { name: "Tops", href: "#" },
+            { name: "Dresses", href: "#" },
+            { name: "Pants", href: "#" },
+            { name: "Denim", href: "#" },
+            { name: "Sweaters", href: "#" },
+            { name: "T-Shirts", href: "#" },
+            { name: "Jackets", href: "#" },
+            { name: "Activewear", href: "#" },
+            { name: "Browse All", href: "#" },
           ],
         },
         {
-          id: 'price',
-          name: 'Price',
+          id: "accessories",
+          name: "Accessories",
           items: [
-            { name: 'Below 99', href: '#' },
-            { name: '100 - 199', href: '#' },
-            { name: '200 - 299', href: '#' },
-            { name: '300 - 399', href: '#' },
-            { name: '400-499', href: '#' },
-            { name: 'Above 500', href: '#' },
+            { name: "Watches", href: "#" },
+            { name: "Wallets", href: "#" },
+            { name: "Bags", href: "#" },
+            { name: "Sunglasses", href: "#" },
+            { name: "Hats", href: "#" },
+            { name: "Belts", href: "#" },
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: "brands",
+          name: "Brands",
           items: [
-            { name: 'Aarshaveda', href: '#' },
-            { name: 'Boldfit', href: '#' },
-            { name: 'Calcimax', href: '#' },
-            { name: 'Everherb', href: '#' },
-            { name: 'Immunace', href: '#' },
-            { name: 'Liveasy', href: '#' },
-            { name: 'Revital', href: '#' },
+            { name: "Full Nelson", href: "#" },
+            { name: "My Way", href: "#" },
+            { name: "Re-Arranged", href: "#" },
+            { name: "Counterfeit", href: "#" },
+            { name: "Significant Other", href: "#" },
           ],
         },
       ],
     },
     {
-      id: 'fitnesssupplements',
-      name: 'Fitness & Supplements',
+      id: "men",
+      name: "Men",
       featured: [
         {
-          name: 'Covid Essentials',
-          href: '#',
+          name: "New Arrivals",
+          href: "#",
           imageSrc:
-            'https://images.unsplash.com/photo-1584744982491-665216d95f8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFza3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
           imageAlt:
-            'Models sitting back to back, wearing Basic Tee in black and bone.',
+            "Drawstring top with elastic loop closure and textured interior padding.",
         },
         {
-          name: 'Skin Care',
-          href: '#',
+          name: "Artwork Tees",
+          href: "#",
           imageSrc:
-            'https://images.unsplash.com/photo-1610595433626-e45abdb5a88b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbmFsJTIwY2FyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
           imageAlt:
-            'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
         },
       ],
       sections: [
         {
-          id: 'subcategory',
-          name: 'Sub category',
+          id: "clothing",
+          name: "Clothing",
           items: [
-            { name: 'Immunity Boosters', href: '#' },
-            { name: 'Multivitamins', href: '#' },
-            { name: 'Protein Supplements', href: '#' },
-            { name: 'Speciality Supplements', href: '#' },
-            { name: 'Weight Management', href: '#' },
-            { name: 'Omega & Fish Oil', href: '#' },
-            { name: 'Browse All', href: '#' },
+            { name: "Tops", href: "#" },
+            { name: "Pants", href: "#" },
+            { name: "Sweaters", href: "#" },
+            { name: "T-Shirts", href: "#" },
+            { name: "Jackets", href: "#" },
+            { name: "Activewear", href: "#" },
+            { name: "Browse All", href: "#" },
           ],
         },
         {
-          id: 'price',
-          name: 'Price',
+          id: "accessories",
+          name: "Accessories",
           items: [
-            { name: 'Below 99', href: '#' },
-            { name: '100 - 199', href: '#' },
-            { name: '200 - 299', href: '#' },
-            { name: '300 - 399', href: '#' },
-            { name: '400-499', href: '#' },
-            { name: 'Above 500', href: '#' },
+            { name: "Watches", href: "#" },
+            { name: "Wallets", href: "#" },
+            { name: "Bags", href: "#" },
+            { name: "Sunglasses", href: "#" },
+            { name: "Hats", href: "#" },
+            { name: "Belts", href: "#" },
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: "brands",
+          name: "Brands",
           items: [
-            { name: 'Aarshaveda', href: '#' },
-            { name: 'Endura Mass', href: '#' },
-            { name: 'Kesh King', href: '#' },
-            { name: 'Organic India', href: '#' },
+            { name: "Re-Arranged", href: "#" },
+            { name: "Counterfeit", href: "#" },
+            { name: "Full Nelson", href: "#" },
+            { name: "My Way", href: "#" },
           ],
         },
       ],
     },
   ],
   pages: [
-    { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' },
+    { name: "Company", href: "#" },
+    { name: "Stores", href: "#" },
   ],
 };
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
-  const {
-    state: { cart },
-  } = CartState();
-
+  const quantity = useSelector(state=>state.cart.quantity);
   const [open, setOpen] = useState(false);
-
+  console.log(quantity);
   return (
     <div className="bg-white z-30 relative">
       {/* Mobile menu */}
@@ -204,9 +199,9 @@ export default function Navbar() {
                         className={({ selected }) =>
                           classNames(
                             selected
-                              ? 'text-indigo-600 border-indigo-600'
-                              : 'text-gray-900 border-transparent',
-                            'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium'
+                              ? "text-indigo-600 border-indigo-600"
+                              : "text-gray-900 border-transparent",
+                            "flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium"
                           )
                         }
                       >
@@ -341,9 +336,9 @@ export default function Navbar() {
                             <Popover.Button
                               className={classNames(
                                 open
-                                  ? 'border-indigo-600 text-indigo-600'
-                                  : 'border-transparent text-gray-700 hover:text-gray-800',
-                                'relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px'
+                                  ? "border-indigo-600 text-indigo-600"
+                                  : "border-transparent text-gray-700 hover:text-gray-800",
+                                "relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
                               )}
                             >
                               {category.name}
@@ -464,13 +459,13 @@ export default function Navbar() {
 
               {/* Cart */}
               <div className="ml-4 flow-root lg:ml-auto">
-                <Link to = '/cart' className="group -m-2 p-2 flex items-center">
+                <Link to="/cart" className="group -m-2 p-2 flex items-center">
                   <ShoppingBagIcon
                     className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                     aria-hidden="true"
                   />
                   <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                    {cart.length}
+                    {quantity}
                   </span>
                   <span className="sr-only">items in cart, view bag</span>
                 </Link>
