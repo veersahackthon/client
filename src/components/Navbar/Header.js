@@ -78,7 +78,7 @@ const Header = () => {
               </NavLink>
             </NavItem>
           </Nav>
-          <NavLink to="/signin" style={{ textDecoration: "none" }}>
+          <NavLink to="/login" style={{ textDecoration: "none" }}>
             <p className="rounded-full px-5  transition duration-150 ease-out  bg-slate-800 text-white font-semibold font-mono hover:bg-gradient-to-r hover:from-fuchsia-600  hover:to-blue-500 transition ease-in-out delay-150 hover:text-black hover:-translate-y-1 hover:scale-110 duration-300">
               Sign In
             </p>

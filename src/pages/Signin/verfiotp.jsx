@@ -36,7 +36,6 @@ function OTPPage() {
           id: response[1].user._id,
           name: response[1].user.name,
           phoneNumber: response[1].user.phoneNumber,
-          wallet: response[1].user.wallet,
         };
         setUser(newUser);
         setJwt(response[1].token);

@@ -3,9 +3,9 @@ import axios from "axios";
 
 const URL = "https://localhost:5000";
 
-export const userSignup = (data) => {
+export const userSignup = async (data) => {
   try {
-    var response = axios.post(`${URL}/user/login`, data);
+    var response = await axios.post(`${URL}/user/signup`, data);
     if (response.status === 200) {
       return [true, response.data];
     } else {
