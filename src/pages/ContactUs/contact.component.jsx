@@ -11,10 +11,10 @@ const ContactC = () => {
           <SupportAgentIcon style={{ fontSize: "60px", color: "grey" }} />
           <h2 className="text-3xl font-light">Support</h2>
           <p className="pt-3 pb-1 font-light">
-            Get help with all Gillyweed products
+            Get help with all WellBe products
           </p>
           <p className="pt-1 pb-1 font-light ml-8">
-            Get answers from the Gillyweed Forums community
+            Get answers from the WellBe Forums community
           </p>
           <p className="pt-1 pb-1 font-light ml-8">
             Find support options for enterprise and business
@@ -31,10 +31,10 @@ const ContactC = () => {
           <h2 className="ml-24 text-3xl font-light">Sales</h2>
           <div className="ml-16">
             <p className="pt-3 pb-1 font-light">
-              Get help with all Gillyweed products
+              Get help with all WellBe products
             </p>
             <p className="pt-1 pb-1 font-light ml-8">
-              Get answers from the Gillyweed Forums community
+              Get answers from the WellBe Forums community
             </p>
             <p className="pt-1 pb-1 font-light ml-8">
               Find support options for enterprise and business
@@ -45,10 +45,10 @@ const ContactC = () => {
       <div className="p-10  bg-gray-100">
         <h2 className="text-2xl  text-center"> Security</h2>
         <p className="font-light text-center pt-2">
-          Get help with all Gillyweed products
+          Get help with all WellBe products
         </p>
         <p className="font-light ml-8 text-center pt-2">
-          Get answers from the Gillyweed Forums community
+          Get answers from the WellBe Forums community
         </p>
       </div>
     </div>

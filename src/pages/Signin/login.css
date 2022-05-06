@@ -1,0 +1,80 @@
+.heading {
+    color: #602912;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+  
+  .login-main {
+    height: 60vh;
+    width: 50vw;
+    border-radius: 2rem;
+    background-color: rgb(247, 225, 217);
+  }
+  .login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mid-sec div {
+    margin: 1rem;
+  }
+  
+  .vl{
+    border: 0.1rem solid #602912;
+    height: 16rem;
+  }
+  
+  .mid-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cake {
+    width: 40%;
+    border-right: 3px solid brown;
+  }
+  
+  .cakeimg {
+    height: 15rem;
+    width: 15rem;
+    margin-right: 2rem;
+  }
+  .sealimg {
+    height: 8rem;
+    width: 11rem;
+    margin-bottom: 1rem;
+  }
+  .mid-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .middle-right-div{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .mid-right input {
+    margin-top: 0;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: #602912;
+  }
+  .verify {
+    color: white;
+    background-color: #ff8d95;
+    border: none;
+    padding: 0.3rem 2rem;
+    border-radius: 0.9rem;
+  }
+  
